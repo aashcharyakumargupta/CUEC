@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://dba:dba%40cuec@cluster0.hga3hnm.mongodb.net/')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/')
     .then(() => console.log('MongoDB Connected to CUEC Database'))
     .catch(err => console.error('MongoDB Connection Error:', err));
 
