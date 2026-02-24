@@ -38,7 +38,7 @@ const UndergroundGarage = () => {
                 }
             };
 
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'development' ? 'http://localhost:5000' : '');
             const res = await axios.post(`${apiUrl}/api/events/register`, formData, config);
             setMessage(res.data.message);
             setFormData({ student_name: '', phone: '', department: '' });

@@ -17,7 +17,7 @@ const Register = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'development' ? 'http://localhost:5000' : '');
             await axios.post(`${apiUrl}/api/auth/register`, formData);
             // Auto login or redirect to login
             navigate('/login');

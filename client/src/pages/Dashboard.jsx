@@ -22,7 +22,7 @@ const Dashboard = () => {
 
         const fetchRegistrations = async () => {
             try {
-                const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+                const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'development' ? 'http://localhost:5000' : '');
                 const res = await axios.get(`${apiUrl}/api/events/my-registrations`, {
                     headers: { 'x-auth-token': token }
                 });
