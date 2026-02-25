@@ -347,13 +347,12 @@ a {
   line-height: 1.1;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-  background: linear-gradient(to right, #fff, var(--cuec-silver));
+  background: linear-gradient(135deg, var(--cuec-white) 0%, #aaa 50%, var(--cuec-red) 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
-  position: relative;
-  z-index: 10;
+  animation: shine 5s linear infinite;
 }
 
 .ug-form-card {
@@ -545,5 +544,9 @@ a {
   .auth-card,
   .ug-form-card {
     padding: 2rem 1.5rem;
+  }
+
+  .divider-hide-mobile {
+    display: none;
   }
 }

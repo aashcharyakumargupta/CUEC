@@ -46,14 +46,14 @@ const Dashboard = () => {
                 <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', letterSpacing: '1px' }}>{user.email}</p>
             </div>
 
-            <h3 className="fade-in-up stagger-1" style={{ marginBottom: '2rem', color: 'var(--text-primary)', fontFamily: 'var(--font-display)', fontSize: '1.5rem' }}>Your Transmissions</h3>
+            <h3 className="fade-in-up stagger-1" style={{ marginBottom: '2rem', color: 'var(--text-primary)', fontFamily: 'var(--font-display)', fontSize: '1.5rem' }}>Your Ventures</h3>
 
             {registrations.length === 0 ? (
                 <div className="glass-card fade-in-up stagger-2" style={{ padding: '4rem 2rem', textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '1rem', opacity: 0.5 }}>📡</div>
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>No active event signals detected.</p>
-                    <button onClick={() => navigate('/events/underground-garage')} className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
-                        Join Underground Garage
+                    <div style={{ fontSize: '3rem', marginBottom: '1rem', opacity: 0.5 }}>🚀</div>
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>No active ventures or events detected.</p>
+                    <button onClick={() => navigate('/events/redbull-basement')} className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
+                        Join Red Bull Basement
                     </button>
                 </div>
             ) : (
@@ -68,11 +68,11 @@ const Dashboard = () => {
                             </h4>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', display: 'flex', justifyContent: 'space-between' }}>
-                                    <span style={{ opacity: 0.7 }}>Operative:</span>
+                                    <span style={{ opacity: 0.7 }}>Innovator:</span>
                                     <span style={{ color: 'var(--text-primary)', fontWeight: '500' }}>{reg.student_name}</span>
                                 </p>
                                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', display: 'flex', justifyContent: 'space-between' }}>
-                                    <span style={{ opacity: 0.7 }}>Sector:</span>
+                                    <span style={{ opacity: 0.7 }}>Department:</span>
                                     <span style={{ color: 'var(--text-primary)', fontWeight: '500' }}>{reg.department}</span>
                                 </p>
                             </div>

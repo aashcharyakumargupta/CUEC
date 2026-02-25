@@ -1,14 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-import UndergroundGarage from './pages/UndergroundGarage';
+import RedBullBasement from './pages/RedBullBasement';
+import About from './pages/About';
+import Footer from './components/Footer';
 import Background3D from './components/Background3D';
+import Lenis from 'lenis';
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
   return (
     <Router>
       <Background3D />
@@ -18,8 +39,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/events/underground-garage" element={<UndergroundGarage />} />
+        <Route path="/events/redbull-basement" element={<RedBullBasement />} />
+        <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

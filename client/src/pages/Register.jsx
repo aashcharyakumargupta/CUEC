@@ -30,7 +30,7 @@ const Register = () => {
         <div className="auth-container">
             <div className="auth-card glass-card fade-in-up">
                 <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '2rem', textAlign: 'center', color: 'var(--text-primary)' }}>
-                    Join <span className="text-gradient">CUEC</span>
+                    Join Innovators at <span className="text-gradient">CUEC</span>
                 </h2>
                 {error && <p style={{ color: 'var(--cuec-red)', marginBottom: '1.5rem', textAlign: 'center', background: 'rgba(255, 51, 102, 0.1)', padding: '0.8rem', borderRadius: '8px', border: '1px solid rgba(255,51,102,0.3)' }}>{error}</p>}
 
@@ -51,7 +51,7 @@ const Register = () => {
                         <label>Password</label>
                         <input type="password" name="password" value={formData.password} onChange={handleChange} required minLength="6" placeholder="••••••••" />
                     </div>
-                    <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem', padding: '1rem', fontSize: '1.1rem' }}>Create Account</button>
+                    <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem', padding: '1rem', fontSize: '1.1rem' }}>Create Innovator Account</button>
                 </form>
 
                 <p style={{ textAlign: 'center', marginTop: '2rem', color: 'var(--text-secondary)' }}>
