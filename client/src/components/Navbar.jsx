@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
                 <Link to="/" className="nav-link" onClick={closeMenu}>Home</Link>
 
-                <div style={{ position: 'relative' }}>
+                <div style={{ position: 'relative', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <button
                         className="nav-link"
                         style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit' }}
@@ -56,17 +56,18 @@ const Navbar = () => {
                             style={{
                                 position: isMobileMenuOpen ? 'static' : 'absolute',
                                 top: '100%',
-                                left: isMobileMenuOpen ? '1rem' : '0',
+                                left: isMobileMenuOpen ? 'auto' : '0',
                                 marginTop: '0.5rem',
-                                background: 'rgba(20, 20, 20, 0.95)',
-                                backdropFilter: 'blur(10px)',
-                                border: '1px solid rgba(255,255,255,0.1)',
+                                background: isMobileMenuOpen ? 'transparent' : 'rgba(20, 20, 20, 0.95)',
+                                backdropFilter: isMobileMenuOpen ? 'none' : 'blur(10px)',
+                                border: isMobileMenuOpen ? 'none' : '1px solid rgba(255,255,255,0.1)',
                                 borderRadius: '8px',
                                 padding: '0.5rem',
                                 display: 'flex',
                                 flexDirection: 'column',
+                                alignItems: 'center',
                                 gap: '0.25rem',
-                                minWidth: '200px',
+                                minWidth: isMobileMenuOpen ? 'auto' : '200px',
                                 zIndex: 50
                             }}
                         >
