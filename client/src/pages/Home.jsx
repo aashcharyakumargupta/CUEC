@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Rocket, MonitorPlay, Users, ArrowRight, BrainCircuit } from 'lucide-react';
+import LetsConnect from '../components/LetsConnect';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -181,6 +182,8 @@ const Home = () => {
                     Start Your Journey
                 </Link>
             </motion.div>
+
+            <LetsConnect />
 
         </div>
     );
