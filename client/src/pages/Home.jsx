@@ -28,7 +28,7 @@ const Home = () => {
     const opacityHero = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     return (
-        <div className="container" style={{ paddingTop: '5rem', paddingBottom: '6rem', minHeight: 'calc(100vh - 76px)', display: 'flex', flexDirection: 'column', gap: '6rem' }}>
+        <div className="container" style={{ position: 'relative', paddingTop: '5rem', paddingBottom: '6rem', minHeight: 'calc(100vh - 76px)', display: 'flex', flexDirection: 'column', gap: '6rem' }}>
 
             {/* Hero Section */}
             <motion.div
@@ -51,7 +51,7 @@ const Home = () => {
                 >
                     <motion.div variants={fadeInUp} style={{ display: 'inline-block', padding: '0.5rem 1rem', background: 'rgba(255, 0, 51, 0.1)', border: '1px solid rgba(255, 0, 51, 0.3)', borderRadius: '30px', marginBottom: '1.5rem' }}>
                         <span style={{ color: 'var(--cuec-red)', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem' }}>
-                            Innovative Entrepreneurship at CU UP
+                            DREAM DARE DEVELOP
                         </span>
                     </motion.div>
                     <motion.h1 variants={fadeInUp} className="text-gradient" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', marginBottom: '1.5rem', lineHeight: 1.1, fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '1px' }}>
